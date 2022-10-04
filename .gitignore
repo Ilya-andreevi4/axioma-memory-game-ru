@@ -8,6 +8,9 @@
 # testing
 /coverage
 
+#git
+/axioma-memory-game-main-ru.git
+
 # production
 /build
 
