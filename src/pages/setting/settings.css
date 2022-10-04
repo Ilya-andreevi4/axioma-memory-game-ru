@@ -1,0 +1,125 @@
+.modalSettings {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(150, 150, 150, 0.4);
+    box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.151), 1px 1px 8px 1 rgba(0, 0, 0, 0.151);
+
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.modalSettings.active{
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modalContent {
+    text-align: center;
+    color: #0169d8;
+
+    padding: 20px;
+    border-radius: 10px;
+    background: white;
+    height: 20%;
+    width: 30%;
+    transform: scale(0.5);
+    transition: 0.5s all;
+}
+
+.modalContent.active {
+    transform: scale(1);
+}
+
+.settingsImg {
+    position: relative;
+    display: block;
+    background: none;
+    border: none;
+    border-radius: 50%;
+    left: 30px;
+    top: 30px;
+    width: 60px;
+    height: 60px;
+    padding: 0;
+    margin-bottom: 10vh;
+}
+
+.settingIcon {
+    width: 60px;
+    height: 60px;
+    -webkit-filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.719));
+    filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.712));
+    transition: 0.3s;
+}
+.settingIcon:hover {
+    -webkit-filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.719));
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.719));
+}
+.settingIcon:active {
+    -webkit-filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.719));
+    filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.719));
+}
+
+/* Кнопка выхода */
+
+.quitButton {
+    position: absolute;
+
+    width: 30%;
+    height: 40px;
+    top: 70%;
+
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+
+    
+    font-style: none;
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+
+    border-radius: 50px;
+    color: #000;
+    background: #ffffff;
+    background-blend-mode: normal;
+    box-shadow: 0px 0px 2px 0px rgba(255, 0, 0, 0.48);
+    transition: 0.3s;
+}
+
+.quitButton:hover {
+    box-shadow: 0px 0px 4px 0px rgba(255, 0, 0, 0.48), 0px 0px 14px 0px rgba(255, 0, 0, 0.48);
+}
+
+.quitButton:active {
+    color: rgb(255, 255, 255);
+    border-radius: 40px;
+    box-shadow: none;
+    background: rgb(214, 32, 0);
+    border-color: '#005cbf';
+}
+
+.textQuit {
+    margin: 0px;
+    text-transform: uppercase;
+    position: absolute;
+    
+    width: 100%;
+    height: 100%;
+
+    line-height: 40px;
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    font-weight: 550;
+    text-align: center;
+}
