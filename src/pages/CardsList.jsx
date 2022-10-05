@@ -61,7 +61,7 @@ export default function CardsList(props) {
                     let resolvedCardsUpdated = resolvedCards.set(openedCardsKeys[0], true);
                     resolvedCardsUpdated = resolvedCardsUpdated.set(openedCardsKeys[1], true);
                     setResolvedCards(new Map(resolvedCardsUpdated));
-                    setIsComplete(resolvedCardsUpdated.size == 28);
+                    setIsComplete(resolvedCardsUpdated.size == 18);
                 }
                 setOpenedCards(new Map());
             }, 1500);
