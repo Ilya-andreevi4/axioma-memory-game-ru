@@ -23,15 +23,17 @@
 }
 
 .modalContent {
+    display: inline-grid;
+    align-items: center;
+    justify-content: center;
+    
     text-align: center;
     color: #0169d8;
-
     padding: 20px;
     border-radius: 10px;
     background: white;
-    height: 20%;
+    height: max-content;
     width: 30%;
-    transform: scale(0.5);
     transition: 0.5s all;
 }
 
@@ -72,23 +74,20 @@
 /* Кнопка выхода */
 
 .quitButton {
-    position: absolute;
-
-    width: 30%;
-    height: 40px;
-    top: 70%;
-
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 18px;
+    width: 60%;
+    height: 32px;
     left: 50%;
-    margin-right: -50%;
     transform: translate(-50%, -50%);
-
-    
     font-style: none;
     font-family: Montserrat, Arial, Helvetica, sans-serif;
     font-size: 24px;
     font-weight: 700;
     text-align: center;
-
     border-radius: 50px;
     color: #000;
     background: #ffffff;
@@ -111,15 +110,13 @@
 
 .textQuit {
     margin: 0px;
+    
     text-transform: uppercase;
     position: absolute;
-    
-    width: 100%;
-    height: 100%;
 
-    line-height: 40px;
+    line-height: 32px;
     font-family: Montserrat, Arial, Helvetica, sans-serif;
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 550;
     text-align: center;
 }

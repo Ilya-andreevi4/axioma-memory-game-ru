@@ -84,7 +84,7 @@ export default function CardsList(props) {
         })}
     </div>
     : <Settings active={modalActive} setActive={setModalActive}> 
-        <h1>Поздравляю! Вы открыли все пары карт!</h1>
+        <p>Поздравляю! Вы открыли все пары карт!</p>
         <Link to="./StartPage" className="quitButton" >
             <p className="textQuit">Повторить</p>       
         </Link>
