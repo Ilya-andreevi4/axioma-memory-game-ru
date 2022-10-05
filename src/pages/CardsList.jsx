@@ -5,34 +5,34 @@ import { Link } from 'react-router-dom'
 
 
 const getData = () => [
-    {back: "img/cards/card_logo.png",imgSrc: "img/cards/beak.jpg", name: "beak"},
-    {back: "img/cards/card_logo.png",imgSrc: "img/cards/ears.jpg", name: "ears"},
-    {back: "img/cards/card_logo.png",imgSrc: "img/cards/eyes.jpg", name: "eyes"},
-    {back: "img/cards/card_logo.png",imgSrc: "img/cards/face.jpg", name: "face"},
-    {back: "img/cards/card_logo.png",imgSrc: "img/cards/fingers.jpg", name: "fingers"},
-    {back: "img/cards/card_logo.png",imgSrc: "img/cards/hands.jpg", name: "hands"},
-    {back: "img/cards/card_logo.png",imgSrc: "img/cards/head.jpg", name: "head"},
-    {back: "img/cards/card_logo.png",imgSrc: "img/cards/knees.jpg", name: "knees"},
-    {back: "img/cards/card_logo.png",imgSrc: "img/cards/legs.jpg", name: "legs"},
-    {back: "img/cards/card_logo.png",imgSrc: "img/cards/nose.jpg", name: "nose"},
-    {back: "img/cards/card_logo.png",imgSrc: "img/cards/shoulders.jpg", name: "shoulders"},
-    {back: "img/cards/card_logo.png",imgSrc: "img/cards/tail.jpg", name: "tail"}, 
-    {back: "img/cards/card_logo.png",imgSrc: "img/cards/toes.jpg", name: "toes"}, 
-    {back: "img/cards/card_logo.png",imgSrc: "img/cards/wings.jpg", name: "wings"},
-    {back: "img/cards/card_logo.png",imgSrc: "img/cards/beak.jpg", name: "beak"}, 
-    {back: "img/cards/card_logo.png",imgSrc: "img/cards/ears.jpg", name: "ears"}, 
-    {back: "img/cards/card_logo.png",imgSrc: "img/cards/eyes.jpg", name: "eyes"}, 
-    {back: "img/cards/card_logo.png",imgSrc: "img/cards/face.jpg", name: "face"}, 
-    {back: "img/cards/card_logo.png",imgSrc: "img/cards/fingers.jpg", name: "fingers"},
-    {back: "img/cards/card_logo.png",imgSrc: "img/cards/hands.jpg", name: "hands"},
-    {back: "img/cards/card_logo.png",imgSrc: "img/cards/head.jpg", name: "head"}, 
-    {back: "img/cards/card_logo.png",imgSrc: "img/cards/knees.jpg", name: "knees"},
-    {back: "img/cards/card_logo.png",imgSrc: "img/cards/legs.jpg", name: "legs"}, 
-    {back: "img/cards/card_logo.png",imgSrc: "img/cards/nose.jpg", name: "nose"}, 
-    {back: "img/cards/card_logo.png",imgSrc: "img/cards/shoulders.jpg", name: "shoulders"},
-    {back: "img/cards/card_logo.png",imgSrc: "img/cards/tail.jpg", name: "tail"}, 
-    {back: "img/cards/card_logo.png",imgSrc: "img/cards/toes.jpg", name: "toes"}, 
-    {back: "img/cards/card_logo.png",imgSrc: "img/cards/wings.jpg", name: "wings"}
+    {back: "img/cards/card_logo.png",imgSrc: "img/cards_part_1/bee.jpg", name: "bee"},
+    {back: "img/cards/card_logo.png",imgSrc: "img/cards_part_1/bird.jpg", name: "bird"},
+    {back: "img/cards/card_logo.png",imgSrc: "img/cards_part_1/butterfly.jpg", name: "butterfly"},
+    {back: "img/cards/card_logo.png",imgSrc: "img/cards_part_1/chamomile.jpg", name: "chamomile"},
+    {back: "img/cards/card_logo.png",imgSrc: "img/cards_part_1/flower.jpg", name: "flower"},
+    {back: "img/cards/card_logo.png",imgSrc: "img/cards_part_1/flower1.jpg", name: "flower1"},
+    {back: "img/cards/card_logo.png",imgSrc: "img/cards_part_1/ladybug.jpg", name: "ladybug"},
+    {back: "img/cards/card_logo.png",imgSrc: "img/cards_part_1/snail.jpg", name: "snail"},
+    {back: "img/cards/card_logo.png",imgSrc: "img/cards_part_1/tree.jpg", name: "tree"},/* 
+    {back: "img/cards/card_logo.png",imgSrc: "img/cards_part_1/nose.jpg", name: "nose"},
+    {back: "img/cards/card_logo.png",imgSrc: "img/cards_part_1/shoulders.jpg", name: "shoulders"},
+    {back: "img/cards/card_logo.png",imgSrc: "img/cards_part_1/tail.jpg", name: "tail"}, 
+    {back: "img/cards/card_logo.png",imgSrc: "img/cards_part_1/toes.jpg", name: "toes"}, 
+    {back: "img/cards/card_logo.png",imgSrc: "img/cards_part_1/wings.jpg", name: "wings"}, */
+    {back: "img/cards/card_logo.png",imgSrc: "img/cards_part_1/bee.jpg", name: "bee"}, 
+    {back: "img/cards/card_logo.png",imgSrc: "img/cards_part_1/bird.jpg", name: "bird"}, 
+    {back: "img/cards/card_logo.png",imgSrc: "img/cards_part_1/chamomile.jpg", name: "chamomile"}, 
+    {back: "img/cards/card_logo.png",imgSrc: "img/cards_part_1/butterfly.jpg", name: "butterfly"}, 
+    {back: "img/cards/card_logo.png",imgSrc: "img/cards_part_1/flower.jpg", name: "flower"},
+    {back: "img/cards/card_logo.png",imgSrc: "img/cards_part_1/flower1.jpg", name: "flower1"},
+    {back: "img/cards/card_logo.png",imgSrc: "img/cards_part_1/ladybug.jpg", name: "ladybug"}, 
+    {back: "img/cards/card_logo.png",imgSrc: "img/cards_part_1/snail.jpg", name: "snail"},
+    {back: "img/cards/card_logo.png",imgSrc: "img/cards_part_1/tree.jpg", name: "tree"},/*  
+    {back: "img/cards/card_logo.png",imgSrc: "img/cards_part_1/nose.jpg", name: "nose"}, 
+    {back: "img/cards/card_logo.png",imgSrc: "img/cards_part_1/shoulders.jpg", name: "shoulders"},
+    {back: "img/cards/card_logo.png",imgSrc: "img/cards_part_1/tail.jpg", name: "tail"}, 
+    {back: "img/cards/card_logo.png",imgSrc: "img/cards_part_1/toes.jpg", name: "toes"}, 
+    {back: "img/cards/card_logo.png",imgSrc: "img/cards_part_1/wings.jpg", name: "wings"} */
 ]
   
 const randomize = () => {
