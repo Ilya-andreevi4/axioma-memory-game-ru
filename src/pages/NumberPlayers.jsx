@@ -8,21 +8,21 @@ const NumberPlayers = () => {
                     <img src="img/back_icon.png" alt="Back" className="backimg"/>        
                 </Link>
 
-                <h1 className="header2">Main menu</h1>
+                <h1 className="header2">Главное меню</h1>
 
-                <div className="boxLang">
+                {/* <div className="boxLang">
                     <p className="lng-lang">Lang: </p>
                     <select className="changeLang">
                         <option value="en" >EN</option>
                         <option value="ru">RU</option>
                     </select>
-                </div> 
+                </div>  */}
             </header>
             <div className='content'>
-                <h1 className="lng-nameGame">Number of Players</h1>
+                <h1 className="lng-nameGame">Количество игроков</h1>
                 <div className="numBox">
                     <select className="numberPlayers">
-                            <option value="1" value>1</option>
+                            <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
                             <option value="4">4</option>
@@ -31,37 +31,37 @@ const NumberPlayers = () => {
 
                 <div className="playersCards">
                     <div className="playerCard">
-                        <h1 className="playerTitle">Player 1</h1>
+                        <h1 className="playerTitle">Игрок 1</h1>
                         <div className="formGroup">
                             <input className="formInput" placeholder=' ' id='p1' />
-                            <label htmlFor="p1" className="formLabel">Player 1</label>
+                            <label htmlFor="p1" className="formLabel">Игрок 1</label>
                         </div>
                     </div>
                     <div className="playerCard">
-                        <h1 className="playerTitle">Player 2</h1>
+                        <h1 className="playerTitle">Игрок 2</h1>
                         <div className="formGroup">
                             <input className="formInput" placeholder=' ' id='p2' />
-                            <label htmlFor="p2" className="formLabel">Player 2</label>
+                            <label htmlFor="p2" className="formLabel">Игрок 2</label>
                         </div>
                     </div>
                     <div className="playerCard">
-                        <h1 className="playerTitle">Player 3</h1>
+                        <h1 className="playerTitle">Игрок 3</h1>
                         <div className="formGroup">
                             <input className="formInput" placeholder=' ' id='p3' />
-                            <label htmlFor="p3" className="formLabel">Player 3</label>
+                            <label htmlFor="p3" className="formLabel">Игрок 3</label>
                         </div>
                     </div>
                     <div className="playerCard">
-                        <h1 className="playerTitle">Player 4</h1>
+                        <h1 className="playerTitle">Игрок 4</h1>
                         <div className="formGroup">
                             <input className="formInput" placeholder=' ' id='p4' />
-                            <label htmlFor="p4" className="formLabel">Player 4</label>
+                            <label htmlFor="p4" className="formLabel">Игрок 4</label>
                         </div>
                     </div>
                 </div>
 
                 <Link to="/GamePage"className="startGame" >
-                    <p className="lng-start">Start Game!</p>        
+                    <p className="lng-start">Начать игру!</p>        
                 </Link>
 
             </div>

@@ -52,42 +52,42 @@ const SelectTopic = () => {
                     <img src="img/back_icon.png" alt="Back" className="backimg"/>        
                 </Link>
 
-                <h1 className="header2">Main menu</h1>
+                <h1 className="header2">Главное меню</h1>
 
-                <div className="boxLang">
+                {/* <div className="boxLang">
                     <p className="lng-lang">Lang: </p>
                     <select className="changeLang">
                         <option value="en" >EN</option>
                         <option value="ru">RU</option>
                     </select>
-                </div> 
+                </div>  */}
             </header>
             
             <div className='content'>
-                <h1 className="lng-nameGame">Select a topic</h1>
+                <h1 className="lng-nameGame">Выбрать тему</h1>
                 <div className="btn-group">
                     <button className="button-select" >
-                        <p>Lesson 1</p>             
+                        <p>Урок 1</p>             
                     </button>
                     <button className="button-select" >
-                        <p>Lesson 2</p>              
+                        <p>Урок 2</p>              
                     </button>
                     <button className="button-select" >
-                        <p>Lesson 3</p>              
+                        <p>Урок 3</p>              
                     </button>
                     <button className="button-select" >
-                        <p>Lesson 4</p>              
+                        <p>Урок 4</p>              
                     </button>
                     <button className="button-select" >
-                        <p>Lesson 5</p>              
+                        <p>Урок 5</p>              
                     </button>
                     <button className="button-select" >
-                        <p>Lesson 6</p>             
+                        <p>Урок 6</p>             
                     </button>
 
                     <div>
                         <Link to="/NumberPlayers"className="nextButton" >
-                            <p className="lng-start">Next</p>        
+                            <p className="lng-start">Дальше</p>        
                         </Link>
                     </div>
                 </div>
