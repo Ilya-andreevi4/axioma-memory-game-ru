@@ -110,7 +110,7 @@
 
 .textQuit {
     margin: 0px;
-    
+    display: inline-block;
     text-transform: uppercase;
     position: absolute;
 

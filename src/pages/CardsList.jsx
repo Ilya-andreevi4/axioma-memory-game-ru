@@ -12,12 +12,7 @@ const getData = () => [
     {back: "img/cards/card_logo.png",imgSrc: "img/cards_part_1/flower1.jpg", name: "flower1"},
     {back: "img/cards/card_logo.png",imgSrc: "img/cards_part_1/ladybug.jpg", name: "ladybug"},
     {back: "img/cards/card_logo.png",imgSrc: "img/cards_part_1/snail.jpg", name: "snail"},
-    {back: "img/cards/card_logo.png",imgSrc: "img/cards_part_1/tree.jpg", name: "tree"},/* 
-    {back: "img/cards/card_logo.png",imgSrc: "img/cards_part_1/nose.jpg", name: "nose"},
-    {back: "img/cards/card_logo.png",imgSrc: "img/cards_part_1/shoulders.jpg", name: "shoulders"},
-    {back: "img/cards/card_logo.png",imgSrc: "img/cards_part_1/tail.jpg", name: "tail"}, 
-    {back: "img/cards/card_logo.png",imgSrc: "img/cards_part_1/toes.jpg", name: "toes"}, 
-    {back: "img/cards/card_logo.png",imgSrc: "img/cards_part_1/wings.jpg", name: "wings"}, */
+    {back: "img/cards/card_logo.png",imgSrc: "img/cards_part_1/tree.jpg", name: "tree"},
     {back: "img/cards/card_logo.png",imgSrc: "img/cards_part_1/bee.jpg", name: "bee"}, 
     {back: "img/cards/card_logo.png",imgSrc: "img/cards_part_1/bird.jpg", name: "bird"}, 
     {back: "img/cards/card_logo.png",imgSrc: "img/cards_part_1/chamomile.jpg", name: "chamomile"}, 
@@ -26,12 +21,7 @@ const getData = () => [
     {back: "img/cards/card_logo.png",imgSrc: "img/cards_part_1/flower1.jpg", name: "flower1"},
     {back: "img/cards/card_logo.png",imgSrc: "img/cards_part_1/ladybug.jpg", name: "ladybug"}, 
     {back: "img/cards/card_logo.png",imgSrc: "img/cards_part_1/snail.jpg", name: "snail"},
-    {back: "img/cards/card_logo.png",imgSrc: "img/cards_part_1/tree.jpg", name: "tree"},/*  
-    {back: "img/cards/card_logo.png",imgSrc: "img/cards_part_1/nose.jpg", name: "nose"}, 
-    {back: "img/cards/card_logo.png",imgSrc: "img/cards_part_1/shoulders.jpg", name: "shoulders"},
-    {back: "img/cards/card_logo.png",imgSrc: "img/cards_part_1/tail.jpg", name: "tail"}, 
-    {back: "img/cards/card_logo.png",imgSrc: "img/cards_part_1/toes.jpg", name: "toes"}, 
-    {back: "img/cards/card_logo.png",imgSrc: "img/cards_part_1/wings.jpg", name: "wings"} */
+    {back: "img/cards/card_logo.png",imgSrc: "img/cards_part_1/tree.jpg", name: "tree"}
 ]
   
 const randomize = () => {
@@ -46,41 +36,52 @@ export default function CardsList(props) {
     const [openedCards, setOpenedCards] = useState(new Map());
     const [resolvedCards, setResolvedCards] = useState(new Map());
     const [modalActive, setModalActive] = useState(true);
+    const [isLoading, setIsLoading] = useState(false);
 
-    useEffect(() => {
+    useEffect( () => {
         if(openedCards.size === 2) {
-            setTimeout(() => {
-                const openedCardsKeys = Array.from(openedCards.keys()); 
+                setIsLoading(true);
+                setTimeout(() => {
+                    const openedCardsKeys = Array.from(openedCards.keys()); 
                 if(cardsData[openedCardsKeys[0]].name === cardsData[openedCardsKeys[1]].name) {
                     let resolvedCardsUpdated = resolvedCards.set(openedCardsKeys[0], true);
                     resolvedCardsUpdated = resolvedCardsUpdated.set(openedCardsKeys[1], true);
                     setResolvedCards(new Map(resolvedCardsUpdated));
-                    setIsComplete(resolvedCardsUpdated.size == 18);
+                    setIsComplete(resolvedCardsUpdated.size === 18);
                 }
-                setOpenedCards(new Map());
-            }, 1500);
+            setOpenedCards(new Map());
+            setIsLoading(false);
+            }, 1000);
         }
-    }, [openedCards, cardsData, setOpenedCards]);
+        }, [openedCards, cardsData, resolvedCards, setOpenedCards]);
 
     const openCard = useCallback((idx) => {
-        if(openedCards.size < 2) {
+        if (isLoading) {
+            return
+        } else if (openedCards.size < 2) {         
             setOpenedCards(new Map(openedCards.set(idx, true)));
         }
-    }, [setOpenedCards, openedCards]);
+    }, [setOpenedCards, openedCards, isLoading]);
 
     return  !isComplete ? 
     <div className={props.className}>
         {cardsData.map((card, idx) => {
-            return  <div key={idx}>
-                <img alt="Игровая карта" src={openedCards.get(idx) ? card.imgSrc : card.back} 
-                 className={'cardImg'} style={{display: resolvedCards.get(idx) ? 'none' : 'block'}} onClick={() => openCard(idx)}/>
-            </div>;
+            return  (
+                <div key={idx}>
+                    <img alt=" "
+                        src={openedCards.get(idx) ? card.imgSrc : card.back} 
+                        className={'cardImg'} 
+                        style={{display: resolvedCards.get(idx) ? 'none' : 'block'}} 
+                        onClick={() => openCard(idx)}
+                    />
+                </div>
+            )
         })}
     </div>
     : <Settings active={modalActive} setActive={setModalActive}> 
         <p>Поздравляю! Вы открыли все пары карт!</p>
-        <Link to="./StartPage" className="quitButton" >
-            <p className="textQuit">Повторить</p>       
+        <Link to="./StartPage" className="quitButton">
+            <span className="textQuit">Повторить</span>       
         </Link>
     </Settings>;
 }
