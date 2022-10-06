@@ -49,24 +49,22 @@ export default function CardsList(props) {
     const [isComplete, setIsComplete] = useState(false);
     const [openedCards, setOpenedCards] = useState(new Map());
     const [resolvedCards, setResolvedCards] = useState(new Map());
-
     const [modalActive, setModalActive] = useState(true);
 
-
     useEffect(() => {
-        if(openedCards.size == 2) {
+        if(openedCards.size === 2) {
             setTimeout(() => {
                 const openedCardsKeys = Array.from(openedCards.keys()); 
-                if(cardsData[openedCardsKeys[0]].name == cardsData[openedCardsKeys[1]].name) {
+                if(cardsData[openedCardsKeys[0]].name === cardsData[openedCardsKeys[1]].name) {
                     let resolvedCardsUpdated = resolvedCards.set(openedCardsKeys[0], true);
                     resolvedCardsUpdated = resolvedCardsUpdated.set(openedCardsKeys[1], true);
                     setResolvedCards(new Map(resolvedCardsUpdated));
-                    setIsComplete(resolvedCardsUpdated.size == 18);
+                    setIsComplete(resolvedCardsUpdated.size === 18);
                 }
                 setOpenedCards(new Map());
             }, 1500);
         }
-    }, [openedCards, cardsData, setOpenedCards]);
+    }, [openedCards, cardsData, resolvedCards, setOpenedCards]);
 
     const openCard = useCallback((idx) => {
         if(openedCards.size < 2) {
@@ -78,7 +76,7 @@ export default function CardsList(props) {
     <div className={props.className}>
         {cardsData.map((card, idx) => {
             return  <div key={idx}>
-                <img src={openedCards.get(idx) ? card.imgSrc : card.back} 
+                <img alt="Игровая карта" src={openedCards.get(idx) ? card.imgSrc : card.back} 
                  className={'cardImg'} style={{display: resolvedCards.get(idx) ? 'none' : 'block'}} onClick={() => openCard(idx)}/>
             </div>;
         })}
