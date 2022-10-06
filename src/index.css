@@ -203,10 +203,6 @@ header {
     background: #5d00ff;
   }
 
-
-
-
-
   .btn-group {
     position: relative;
     justify-content: center;
@@ -436,17 +432,14 @@ border-color: '#005cbf';
   justify-content: center;
   width: 20%;
   height: 20%;
-
   border-radius: 20px;
   border-style: none;
   background: none;
-
   font-family: Montserrat, Arial, Helvetica, sans-serif;
   font-size: 24px;
   font-weight: 500;
   line-height: 30px;
   letter-spacing: 1px;
-  
   box-shadow: 0px 0px 7px -2px #59b2ff, 0px 0px 15px -5px #59b2ff;
   padding: 20px 16px;
   margin-left: 0%;
@@ -475,6 +468,7 @@ border-color: '#005cbf';
   margin-top: 24px;
   margin-bottom: 24px;
 }
+
 .formInput {
   position: relative;
   width: 100%;
@@ -485,7 +479,6 @@ border-color: '#005cbf';
   background: transparent;
   outline: none;
   transition: 0.1s;
-
   text-align: center;
   font-family: Montserrat, Arial, Helvetica, sans-serif;
   font-size: 24px;
@@ -504,7 +497,6 @@ border-color: '#005cbf';
   font-size: 20px;
   font-weight: 500;
   letter-spacing: 1px;
-
   position: absolute;
   top:0%;
   left: 0%;
@@ -590,17 +582,14 @@ border-color: '#005cbf';
   display: none;
   width: 100%;
   margin: 10% 0% 25%;
-
   align-items: center;
   text-align: center;
   font-family: Montserrat, Arial, Helvetica, sans-serif;
   font-size: 20px;
   font-weight: 550;
   letter-spacing: 1px;
-
   border-radius: 18px;
   box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.644), -1px -1px 20px -6px rgba(0, 0, 0, 0.544);
-
   transition: 0.3s;
 }
 .playerBox.active{
@@ -618,11 +607,10 @@ border-color: '#005cbf';
 
 .cardsList {
   display: grid;
-  grid-template-columns: repeat(7,9rem);
+  grid-template-columns: repeat(6,9rem);
   grid-template-rows: repeat(4,9rem);
   align-items: center;
   text-align: center;
-  
   align-content: center;
   justify-items: center;
 }

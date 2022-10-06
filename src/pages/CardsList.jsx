@@ -3,7 +3,6 @@ import { useState, useCallback, useMemo, useEffect } from 'react';
 import { Settings } from './setting/Settings'
 import { Link } from 'react-router-dom'
 
-
 const getData = () => [
     {back: "img/cards/card_logo.png",imgSrc: "img/cards_part_1/bee.jpg", name: "bee"},
     {back: "img/cards/card_logo.png",imgSrc: "img/cards_part_1/bird.jpg", name: "bird"},
@@ -40,9 +39,6 @@ const randomize = () => {
     cardData.sort(() => Math.random() - 0.5);
     return cardData;
 };
-
-
-    
 
 export default function CardsList(props) {
     const cardsData = useMemo(() => randomize(), []);
