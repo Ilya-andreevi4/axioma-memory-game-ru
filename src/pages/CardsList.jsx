@@ -55,12 +55,12 @@ export default function CardsList(props) {
                     let resolvedCardsUpdated = resolvedCards.set(openedCardsKeys[0], true);
                     resolvedCardsUpdated = resolvedCardsUpdated.set(openedCardsKeys[1], true);
                     setResolvedCards(new Map(resolvedCardsUpdated));
-                    setIsComplete(resolvedCardsUpdated.size === 18);
+                    setIsComplete(resolvedCardsUpdated.size == 18);
                 }
                 setOpenedCards(new Map());
             }, 1500);
         }
-    }, [openedCards, cardsData, resolvedCards, setOpenedCards]);
+    }, [openedCards, cardsData, setOpenedCards]);
 
     const openCard = useCallback((idx) => {
         if(openedCards.size < 2) {

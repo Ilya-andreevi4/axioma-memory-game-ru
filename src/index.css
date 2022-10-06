@@ -603,8 +603,6 @@ border-color: '#005cbf';
 
 /* CardList */
 
-
-
 .cardsList {
   display: grid;
   grid-template-columns: repeat(6,9rem);
