@@ -111,7 +111,7 @@ header {
 }
 
 /* Замена языка */
-.boxLang {
+/* .boxLang {
   position: absolute;
   left: 80%;
   top: 45px;
@@ -156,7 +156,7 @@ header {
 .changeLang:focus {
   outline: 0;
   box-shadow: 0px 0px 6px 0px rgb(100 100 100 / 50%), 0px 0px 8px 0px rgb(100 100 100 / 50%);
-}
+} */
 
 .boxStart {
   position: absolute;
@@ -219,20 +219,20 @@ header {
   border-radius: 50%;
   border-color: #5d00ff;
   border-style: outset;
-  box-shadow: 0px 0px 8px 1px rgba(12, 12, 12, 0.38), 0px 0px 12px 2px rgba(12, 12, 12, 0.38);
+  box-shadow: 0px 0px 8px 1px rgba(12, 12, 12, 0.38);
   width: 50px;
   height: 50px;
   transition: box-shadow, 0.3s;
 }
 .backimg:hover {
-  box-shadow: 0px 0px 5px -1px rgba(12, 12, 12, 0.5), 0px 0px 8px 0px rgba(12, 12, 12, 0.5);
+  box-shadow: 0px 0px 5px -1px rgba(12, 12, 12, 0.5);
 }
 .backimg:active {
   box-shadow: none;
   background: #5d00ff;
 }
 
-.btn-group {
+/* .btn-group {
   position: relative;
   justify-content: center;
   align-items: center;
@@ -241,8 +241,8 @@ header {
   margin-left: auto;
   margin-right: auto;
   height: 50vh;
-}
-
+} */
+/*
 .button {
   position: relative;
   text-decoration: none;
@@ -363,12 +363,12 @@ header {
   box-shadow: none;
   background: rgb(214, 32, 0);
   border-color: "#005cbf";
-}
+} */
 
 /* Страница игроков */
 
 /* Selector */
-
+/*
 .numBox {
   position: relative;
   width: 10%;
@@ -433,11 +433,11 @@ header {
   box-shadow: none;
   background: #59b2ff;
   color: #fff;
-}
+} */
 
 /* PlayerCards */
 
-.playersCards {
+/* .playersCards {
   position: relative;
   display: flex;
   align-items: center;
@@ -538,10 +538,10 @@ header {
   top: 30px;
   font-size: 18px;
   color: #bebebe;
-}
+} */
 
 /* Start Game Button */
-
+/*
 .startGame {
   position: absolute;
   display: block;
@@ -568,7 +568,7 @@ header {
   box-shadow: none;
   background: rgb(214, 32, 0);
   border-color: "#005cbf";
-}
+} */
 
 /* Game Page */
 
@@ -590,7 +590,7 @@ header {
 }
 
 /* Players Scores */
-
+/*
 .playersScores {
   display: flex;
   flex-direction: column;
@@ -604,8 +604,8 @@ header {
   padding: 0px 30px;
 
   /* background: rgb(255, 137, 59); */
-}
-
+/* } */
+/*
 .playerBox {
   position: relative;
   display: none;
@@ -628,7 +628,7 @@ header {
 }
 .playerBox p {
   margin: 0.7em;
-}
+} */
 
 /* CardList */
 
@@ -645,18 +645,18 @@ header {
 .cardImg {
   height: 100px;
   width: 100px;
-  box-shadow: 1px 1px 1px -1px rgba(0, 0, 0, 0.644), 2px 2px 4px -1px rgba(0, 0, 0, 0.544);
+  box-shadow: 1px 1px 1px -1px rgba(0, 0, 0, 0.644);
   border-radius: 10px;
-  transition: 0.3s;
+  transition: transform filter box-shadow 0.3s;
 }
 .cardImg:hover {
   transform: scale(1.05);
   filter: brightness(101%);
-  box-shadow: 2px 2px 8px -2px rgba(0, 0, 0, 0.644), 2px 2px 10px -2px rgba(0, 0, 0, 0.544);
+  box-shadow: 2px 2px 8px -2px rgba(0, 0, 0, 0.644);
 }
 
 .cardImg:active {
-  box-shadow: 2px 2px 8px -2px rgba(0, 0, 0, 0.644), 2px 2px 10px -2px rgba(0, 0, 0, 0.544);
+  box-shadow: 2px 2px 8px -2px rgba(0, 0, 0, 0.644);
 }
 
 .loadingPage{
