@@ -5,7 +5,6 @@ const StartPage = () => {
   return (
     <div className="startpage">
       <header>
-        {/* <h1 className="touchMeTitle">Нажмите на экран</h1> */}
       </header>
       <div className="content">
         <h1 className="lng-nameGame">Аксиома Мемори</h1>
