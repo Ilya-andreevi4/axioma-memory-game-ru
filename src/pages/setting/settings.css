@@ -4,20 +4,17 @@
     left: 0px;
     width: 100vw;
     height: 100vh;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     background: rgba(150, 150, 150, 0.4);
     box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.151), 1px 1px 8px 1 rgba(0, 0, 0, 0.151);
-
     opacity: 0;
     pointer-events: none;
     transition: 0.5s;
 }
 
-.modalSettings.active{
+.modalSettings.active {
     opacity: 1;
     pointer-events: all;
 }
@@ -26,7 +23,6 @@
     display: inline-grid;
     align-items: center;
     justify-content: center;
-    
     text-align: center;
     color: #0169d8;
     padding: 20px;
@@ -62,10 +58,12 @@
     filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.712));
     transition: 0.3s;
 }
+
 .settingIcon:hover {
     -webkit-filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.719));
     filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.719));
 }
+
 .settingIcon:active {
     -webkit-filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.719));
     filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.719));
@@ -113,7 +111,6 @@
     display: inline-block;
     text-transform: uppercase;
     position: absolute;
-
     line-height: 32px;
     font-family: Montserrat, Arial, Helvetica, sans-serif;
     font-size: 18px;
