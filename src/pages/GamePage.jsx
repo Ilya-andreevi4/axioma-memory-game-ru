@@ -5,7 +5,7 @@ import CardsList from './CardsList'
 import { Link } from 'react-router-dom'
 
 const GamePage = () => {
-    // const scores = [
+    // const players = [
     //     { id: 1, turn: true, points: 0, title: 'Player 1'},
     //     { id: 2, turn: false, points: 0, title: 'Player 2'},
     //     { id: 3, turn: false, points: 0, title: 'Player 3'},
@@ -21,7 +21,7 @@ const GamePage = () => {
                 <button className="settingsImg" onClick={() => setModalActive(true)}>
                     <img src="img/setting.png" alt="Settings" className="settingIcon" />
                 </button>
-                <div className="playerBox active">
+                <div className="playerBox">
                     <p>Игрок 1</p>
                     <span className='playerOneScores'></span>
                 </div>
@@ -38,7 +38,6 @@ const GamePage = () => {
                     <span className='playerFourScores'></span>
                 </div>
             </div>
-            {/* <section></section> */}
 
             <CardsList className="cardsList" />
 

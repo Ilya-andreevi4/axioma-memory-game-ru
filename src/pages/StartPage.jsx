@@ -5,13 +5,7 @@ const StartPage = () => {
   return (
     <div className="startpage">
       <header>
-        {/* <div className="boxLang">
-                    <p className="lng-lang">Lang: </p>
-                    <select className="changeLang">
-                        <option value="en" >EN</option>
-                        <option value="ru">RU</option>
-                    </select>
-                </div>  */}
+        {/* <h1 className="touchMeTitle">Нажмите на экран</h1> */}
       </header>
       <div className="content">
         <h1 className="lng-nameGame">Аксиома Мемори</h1>
