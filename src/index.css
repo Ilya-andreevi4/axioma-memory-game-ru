@@ -219,13 +219,13 @@ header {
   border-radius: 50%;
   border-color: #5d00ff;
   border-style: outset;
-  box-shadow: 0px 0px 8px 1px rgba(12, 12, 12, 0.38);
+  box-shadow: 1px 1px 8px 1px rgba(12, 12, 12, 0.38);
   width: 50px;
   height: 50px;
   transition: box-shadow, 0.3s;
 }
 .backimg:hover {
-  box-shadow: 0px 0px 5px -1px rgba(12, 12, 12, 0.5);
+  box-shadow: 1px 1px 5px -1px rgba(12, 12, 12, 0.5);
 }
 .backimg:active {
   box-shadow: none;
@@ -645,14 +645,14 @@ header {
 .cardImg {
   height: 100px;
   width: 100px;
-  box-shadow: 1px 1px 1px -1px rgba(0, 0, 0, 0.644);
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.644);
   border-radius: 10px;
-  transition: transform filter box-shadow 0.3s;
+  transition: transform filter box-shadow 0.8s;
 }
 .cardImg:hover {
   transform: scale(1.05);
   filter: brightness(101%);
-  box-shadow: 2px 2px 8px -2px rgba(0, 0, 0, 0.644);
+  box-shadow: 2px 2px 8px -1px rgba(0, 0, 0, 0.644);
 }
 
 .cardImg:active {

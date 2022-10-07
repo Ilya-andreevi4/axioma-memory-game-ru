@@ -34,7 +34,7 @@ const GamePage = () => {
           <img src="img/setting.png" alt="Settings" className="settingIcon" />
         </button>
         <div className="playerBox">
-          <p>Игрок 1</p>
+          {/* <p>Игрок 1</p>
           <span className="playerOneScores"></span>
         </div>
         <div className="playerBox">
@@ -47,7 +47,7 @@ const GamePage = () => {
         </div>
         <div className="playerBox">
           <p>Игрок 4</p>
-          <span className="playerFourScores"></span>
+          <span className="playerFourScores"></span> */}
         </div>
       </div>
 
