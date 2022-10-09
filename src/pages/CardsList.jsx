@@ -162,8 +162,7 @@ export default function CardsList(props) {
   return (
   <>
     <div className="countBox">
-      <h3>Количество ходов:</h3>
-      <h3>{count}</h3>
+      <h3>Количество ходов:{count}</h3>
     </div>
     {!isComplete ? (
     <div className={props.className}>
