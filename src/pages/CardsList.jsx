@@ -109,6 +109,7 @@ export default function CardsList(props) {
   const [resolvedCards, setResolvedCards] = useState(new Map());
   const [modalActive, setModalActive] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
+  const [count, setCount] = useState(0);
   // useEffect(()=>{
 
   // },[])
@@ -132,15 +133,17 @@ export default function CardsList(props) {
           );
           setResolvedCards(new Map(resolvedCardsUpdated));
           setIsComplete(resolvedCardsUpdated.size === 18);
+          setCount(count+1);
           setOpenedCards(new Map());
           setIsLoading(false);
         } else {
+          setCount(count+1);
           setOpenedCards(new Map());
           setIsLoading(false);
         }
       }, 1000);
     }
-  }, [openedCards, cardsData, resolvedCards, setOpenedCards]);
+  }, [openedCards, cardsData, resolvedCards, setOpenedCards, count]);
 
   const openCard = useCallback(
     (e, idx) => {
@@ -156,7 +159,13 @@ export default function CardsList(props) {
     [setOpenedCards, openedCards, isLoading]
   );
 
-  return !isComplete ? (
+  return (
+  <>
+    <div className="countBox">
+      <h3>Количество ходов:</h3>
+      <h3>{count}</h3>
+    </div>
+    {!isComplete ? (
     <div className={props.className}>
       {cardsData.map((card, idx) => {
         return (
@@ -175,9 +184,12 @@ export default function CardsList(props) {
   ) : (
     <Settings active={modalActive} setActive={setModalActive}>
       <p>Поздравляю! Вы открыли все пары карт!</p>
+      <p>Всего ходов: {count}</p>
       <Link to="./StartPage" className="quitButton">
         <span className="textQuit">Повторить</span>
       </Link>
     </Settings>
-  );
+  )}
+  </>
+  )
 }

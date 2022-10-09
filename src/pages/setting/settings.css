@@ -117,3 +117,13 @@
     font-weight: 550;
     text-align: center;
 }
+
+.countBox {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    color: blueviolet;
+    margin-top: 80px;
+    margin-left: 8px;
+    margin-right: 16px;
+}
