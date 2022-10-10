@@ -11,7 +11,7 @@ const getData = () => [
   },
   {
     back: "img/cards/card_logo_adobe_express.svg",
-    imgSrc: "img/cards_part_1/_adobe_express.svg",
+    imgSrc: "img/cards_part_1/bird_adobe_express.svg",
     name: "bird",
   },
   {
