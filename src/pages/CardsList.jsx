@@ -110,9 +110,7 @@ export default function CardsList(props) {
   const [modalActive, setModalActive] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
   const [count, setCount] = useState(0);
-  // useEffect(()=>{
 
-  // },[])
   useEffect(() => {
     if (openedCards.size === 2) {
       setIsLoading(true);
